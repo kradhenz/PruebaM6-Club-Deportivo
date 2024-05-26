@@ -1,9 +1,12 @@
 import express from 'express';
+import path from 'path';
+import router from './routes/router.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-
+// Static files
+app.use('/', router);
 
 
 
