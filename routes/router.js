@@ -36,4 +36,30 @@ router.get('/agregar', (req, res) => {
     }
 });
 
+// EDIT PRODUCTS:
+router.get('/editar', (req, res) => {
+    const { nombre, precio } = req.query;
+    // Validation
+    if (!nombre || !precio) {
+        return res.status(400).send('Nombre y precio son requeridos');
+    }
+
+    try {
+        const dataSports = fs.readFileSync('./assets/data/data.json');
+        const { deportes } = JSON.parse(dataSports);
+        const newDeportes = deportes.map((d) => {
+            if (d.nombre === nombre) {
+                return { ...d, precio };
+            }
+            return d;
+        });
+        fs.writeFileSync('./assets/data/data.json', JSON.stringify({ deportes: newDeportes }));
+        res.send(`Se edito el deporte ${nombre} con el precio de ${precio}`);
+    } catch (error) {
+        console.error('Error reading or writing data.json file:', error);
+        res.status(500).send('Error al procesar la solicitud');
+    }
+});
+
+
 export default router;
