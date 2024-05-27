@@ -5,12 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Tomás Inostroza Vilches",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "yargs": "^17.7.2"
   }
 }
