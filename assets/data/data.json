@@ -1,24 +1,24 @@
 {
-  "deportes": [
-    {
-      "nombre": "Volleyball",
-      "precio": "777"
-    },
-    {
-      "nombre": "Climbing",
-      "precio": "355990"
-    },
-    {
-      "nombre": "Basketball",
-      "precio": "963"
-    },
-    {
-      "nombre": "Ciclism",
-      "precio": "987654321"
-    },
-    {
-      "nombre": "Highline",
-      "precio": "8998"
-    }
-  ]
+    "deportes": [
+        {
+            "nombre": "Volleyball",
+            "precio": "777"
+        },
+        {
+            "nombre": "Climbing",
+            "precio": "355990"
+        },
+        {
+            "nombre": "Basketball",
+            "precio": "963"
+        },
+        {
+            "nombre": "Ciclism",
+            "precio": "987654321"
+        },
+        {
+            "nombre": "Highline",
+            "precio": "8998"
+        }
+    ]
 }
